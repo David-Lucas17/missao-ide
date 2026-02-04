@@ -128,13 +128,52 @@ body {
 }
 
 .video {
-  width: 100%;
   position: relative;
-  padding-bottom: 62%;
-  height: 0;
-  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+  margin-top: 1.5rem;
+}
+
+.video a {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 2;
+}
+
+.video img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.video .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.video .play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid #fff;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
 }
 
 .video iframe {
