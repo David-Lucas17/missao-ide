@@ -21,6 +21,15 @@ body {
   line-height: 1.7;
 }
 
+.logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
 .hero {
   background: linear-gradient(135deg, var(--azul-escuro), var(--azul-principal), var(--azul-claro));
   padding: 4rem 1.5rem 5.5rem;
